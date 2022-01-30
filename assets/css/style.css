@@ -847,6 +847,11 @@ header#stepHeader .cloud-img{
         cursor: pointer;
 
 }
+#brickInformation .camera-border .dndzone-area{
+    border: 1px solid #686868;
+    padding: 1.8rem;
+    border-radius: 1rem;
+}
 
 
 /* responsive css */
