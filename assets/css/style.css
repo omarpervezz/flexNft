@@ -929,6 +929,9 @@ header#stepHeader h4 span{
     
 }
 @media(max-width:300px){
+    .steps {
+        margin-left: 1rem;
+    }
     #step .step-content {
         padding-right: 0.7rem;
     }
