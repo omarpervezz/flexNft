@@ -39,5 +39,7 @@ const cameraBorder = document.querySelector('.camera-border')
 function fileHandler(){
      return cameraBorder.classList.add('active_camera')
 }
-
+cameraBorder.addEventListener('click', () => {
+     cameraBorder.classList.toggle('active_camera')
+})
 new DnDZone(document.getElementById('dndzone-example'));

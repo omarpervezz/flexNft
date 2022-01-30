@@ -836,6 +836,7 @@ header#stepHeader h4 span{
 }
 :is(#brickInformation) .col-md-6 .camera-border{
     position: relative;
+    cursor: pointer;
 }
 :is(#brickInformation) .col-md-6 .camera-border img{
    cursor: pointer;
@@ -944,4 +945,16 @@ header#stepHeader h4 span{
 }
 /******************************************/
 /************** STEP PAGE CSS END ************/
+/****************************************/
+
+/******************************************/
+/************** STEP2 PAGE CSS END ************/
+/****************************************/
+.step2 .step-active .step-circle {
+    color: #007bff;
+    background-color: transparent;
+    border-color: #007bff;
+}
+/******************************************/
+/************** STEP2 PAGE CSS END ************/
 /****************************************/
