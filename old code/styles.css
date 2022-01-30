@@ -1,0 +1,63 @@
+.font-weight-500 {
+  font-weight: 500;
+}
+.font-weight-600 {
+  font-weight: 600;
+}
+.font-weight-700,
+.font-weight-bold {
+  font-weight: bold;
+}
+.line-height-24 {
+  line-height: 24px;
+}
+.font-size-12 {
+  font-size: 12px;
+}
+.font-size-18 {
+  font-size: 18px;
+}
+.font-size-20 {
+  font-size: 20px;
+}
+.font-size-21 {
+  font-size: 21px;
+}
+.font-size-24 {
+  font-size: 24px;
+}
+.font-size-30 {
+  font-size: 30px;
+}
+.font-size-32 {
+  font-size: 32px;
+}
+.font-size-36 {
+  font-size: 36px;
+}
+.gap-8 {
+  gap: 8px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+#price-list {
+  height: 61px;
+  background-color: #F0F0F0;
+}
+.price-item-check {
+  width: 24px;
+  height: 24px;
+}
+#brick {
+  aspect-ratio: 1 / 1;
+  width: 10.4%;
+  min-width: 50px;
+}
+#img-label {
+  border-radius: 30px;
+  width: 290px;
+  aspect-ratio: 290 / 204;
+  margin-top: 37px;
+  margin-bottom: 54px;
+}

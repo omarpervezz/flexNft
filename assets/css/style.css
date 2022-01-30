@@ -1,0 +1,893 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+img,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#popup_cards {
+    background-image: linear-gradient(to bottom, #0265a8, #0471b4, #0a7ebf, #128aca, #1b97d5);
+}
+
+
+/* popup window  */
+
+.popup__slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+}
+
+.slider__content {
+    width: 350px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider__content .card {
+    border-radius: 15px !important;
+    position: relative;
+}
+
+.slider__content .card-body h2 {
+    font-size: 29px;
+}
+
+.slider__content .card-body p {
+    font-size: 20px;
+}
+
+.slider__content .card-body img {
+    margin: 0 auto;
+}
+
+.slider__content .card-body {
+    background-color: #118ccc;
+    color: #fff;
+    border-radius: 15px !important;
+}
+
+.slider__content .card-footer {
+    border-bottom-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
+
+.js_prev_arrow {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.js_next_arrow {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+}
+
+.js_stay_button {
+    cursor: pointer;
+}
+
+.js_stay_button p {
+    color: #585858;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.js_stay_button h4 {
+    color: #585858;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+
+/* 
+random cloud background image 
+*/
+
+.random_clouds_1 {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.random_clouds_2 {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    justify-content: space-between;
+}
+
+.clouds {
+    height: 100px;
+    width: 150px;
+    background-image: url('../img/clouds.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* main content body */
+
+.content_body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.content_body .card {
+    border: 2px solid #b1e3ff !important;
+    color: #fff;
+    background-color: #0677b9 !important;
+    position: relative;
+    z-index: 999;
+}
+
+.content_body .card-header {
+    border-bottom: 1px solid #b1e3ff !important;
+}
+
+.content_body .card-body {
+    position: relative;
+}
+
+.content_body .card-body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #b1e3ff;
+}
+
+.select_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.select_menu>ul>li {
+    position: relative;
+}
+
+.select_menu>ul>li>div {
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    padding: 6px 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select_menu ul li ul {
+    background-color: #fff;
+    border-radius: 10px;
+    visibility: hidden;
+    position: absolute;
+    z-index: -999;
+    width: 100%;
+}
+
+.select_menu>ul>li:hover ul {
+    visibility: visible;
+    z-index: 99999;
+}
+
+.select_menu ul li ul li {
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.select_menu ul li ul li:hover {
+    transition: 0.3s all ease-in;
+    cursor: pointer;
+    background-color: #e9ecef;
+    color: #000;
+}
+
+.number {
+    background-color: #047bc1;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+/* bricks  */
+
+.random_bricks {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+
+.bricks_line {
+    width: 100%;
+    height: 45px;
+    background-image: url(../img/bricks.png);
+}
+
+
+/* ground soil  */
+
+.ground_soil {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/grass.png);
+}
+
+
+/*
+----------------------
+for second page 2 css 
+------------------------
+
+*/
+
+.input_contents,
+.choose_bricks {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    position: relative;
+}
+
+.left__content h2 {
+    color: #000;
+    font-size: 35px;
+}
+
+.left__content p {
+    color: #959fb3;
+    font-size: 22px;
+}
+
+.input_contents .left__content {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+}
+
+.left__content.brick_choose {
+    place-items: start !important;
+}
+
+.js_close_btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input_items label h3 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input_items label small {
+    color: #959fb3;
+    font-size: 14px;
+}
+
+.input_items input::placeholder {
+    color: #adadad;
+    opacity: 1;
+    /* Firefox */
+}
+
+.input_items input:-ms-input-placeholder {
+    color: #adadad;
+}
+
+.input_items input::-ms-input-placeholder {
+    color: #adadad;
+}
+
+.left__content {
+    position: relative;
+    z-index: 999;
+}
+
+.input_items {
+    position: relative;
+}
+
+.input_items::before {
+    position: absolute;
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 700;
+    width: 25px;
+    height: 25px;
+    top: 0px;
+    left: -35px;
+    border-radius: 3px;
+    background-color: #0c78ff;
+    color: #fff;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.submit_area button {
+    background-color: #0c78ff;
+    padding: 10px 40px;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 14px;
+    border: 0;
+    border-radius: 30px;
+}
+
+
+/* page 3 css 
+------------------
+*/
+
+.header span {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+
+.brick_choose>h1 {
+    color: #000;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.brick_choose>h4 {
+    color: #000;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.brick_choose>p {
+    color: #959fb3;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+ul.radio_mainbox {
+    background: #f0f0f0;
+    border-radius: 5px;
+    height: 61px;
+    padding: 5px 5px;
+    margin-bottom: 15px;
+}
+
+ul.radio_mainbox li {
+    width: 100%;
+    position: relative;
+}
+
+ul.radio_mainbox li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 1px;
+    height: 16px;
+    background-color: #9d9d9d;
+    transform: translate(-50%, -50%);
+}
+
+ul.radio_mainbox li:last-child:after {
+    content: unset;
+    background-color: unset;
+}
+
+.radiobox {
+    text-align: center;
+    font-size: 20px;
+    line-height: 20px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.radiobox input[type='radio'] {
+    appearance: none;
+    display: none;
+}
+
+.radiobox label {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    text-align: center;
+    transition: linear 0.3s;
+    color: #ababab;
+    display: block;
+    height: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.radiobox input[type='radio']:checked+label {
+    background-color: #0c78ff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.brick_listing_ul {
+    direction: rtl;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.brick_listing_ul li {
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+}
+
+.custom_check {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+}
+
+.custom_check:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+    border: 2px solid #b9b9b9;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    transition: 0.3s all;
+}
+
+.custom_check:checked:before {
+    content: '\f00c';
+    background-color: #0c78ff;
+    color: #fff;
+    border: 0;
+}
+
+.numbricks {
+    color: #8b8b8b;
+    font-size: 20px;
+}
+
+.bricke_name {
+    color: #c8c8c8;
+    font-size: 18px;
+}
+
+.img_bricks {
+    width: 50px;
+    height: 50px;
+    background-color: #0c78ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.control-label {
+    cursor: pointer;
+}
+
+.checkbox .control-label {
+    margin-left: 15px;
+}
+
+.control-label:hover .numbricks {
+    text-decoration: underline;
+}
+
+.button_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.button_area button.go__btn {
+    background-color: #0c78ff;
+    color: #fff;
+    padding: 10px 70px;
+    text-transform: capitalize;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+.button_area button.continue__btn {
+    background-color: #0c78ff;
+    color: #fff;
+    padding: 10px 70px;
+    text-transform: capitalize;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+.brick_listing_ul::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+}
+
+.brick_listing_ul::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+}
+
+.brick_listing_ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+}
+
+.btn_time {
+    display: none;
+}
+
+.random_title {
+    display: none;
+}
+
+.condition__check>h6 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.check__icon i {
+    color: #fff;
+    background-color: #0c78ff;
+    padding: 4px;
+    border-radius: 4px;
+    position: relative;
+    left: 0px;
+    font-size: 14px;
+}
+
+.condition_list {
+    margin-bottom: 15px;
+}
+
+.condition_list h5 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.condition_list p {
+    color: #959fb3;
+    font-size: 18px;
+}
+
+.promo_code label {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #000;
+}
+
+input {
+    background-color: #f0f0f0 !important;
+}
+
+
+/* responsive 
+----------------
+*/
+
+@media (max-width: 768px) {
+    .submit_area button {
+        color: #fff;
+    }
+    .left__content h2 {
+        color: #000;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .left__content p {
+        padding-bottom: 15px;
+        font-size: 14px;
+    }
+    .left__content_wrapper {
+        border-bottom: 1px solid #ededed;
+        margin-bottom: 50px;
+        padding-top: 50px;
+    }
+    .submit_area {
+        border-top: 1px solid #ededed;
+    }
+    .submit_area h4 {
+        font-size: 12px;
+    }
+    /* page 3  */
+    .input_items::before {
+        top: 2px;
+    }
+    .input_items h3 {
+        font-size: 18px;
+    }
+    .brick_choose {
+        color: #fff;
+    }
+    .brick_selection_button {
+        color: #000;
+        background-color: #fff;
+        padding: 15px 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        right: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        z-index: 999999999;
+    }
+    .select_bricks_btn button {
+        background-color: #000;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 14px;
+        padding: 10px 30px;
+        border-radius: 30px;
+        text-align: center;
+        border: 0;
+    }
+    .brick_listing_ul {
+        height: 300px;
+        direction: rtl;
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 769px) {
+    /* page 3 */
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .promo_code {
+        padding-bottom: 100px;
+    }
+    .popup_canvas {
+        background-color: #fff;
+        padding: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: -1000px;
+        box-shadow: 0px 0px 13px 0px #000;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -9999;
+        transition: 0.5s all ease-in-out;
+    }
+    .popup_canvas.active__popup {
+        visibility: visible;
+        opacity: 1;
+        z-index: 999999999999;
+        bottom: 0;
+    }
+    .img_bricks {
+        background-color: transparent;
+    }
+}
+
+
+/******************************************/
+/************** STEP PAGE CSS ************/
+/****************************************/
+header#stepHeader{
+    width: 100%;
+    height: 90px;
+    background-color: #0F88CA;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to right top, #3aa4dd, #2ca7e9, #3195cd, #159ae3, #5faad3);
+}
+header#stepHeader .cloud-img{
+    height: 100%;
+}
+#step .step-content{
+    padding-right: 2rem;
+}
+#step .step-circle{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+#brickInformation {
+    padding: 8rem 0 6rem 0;
+    text-align: center;
+}
+:is(#brickInformation) .col-md-6 h3{
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 1.2rem;
+}
+:is(#brickInformation) .col-md-6 .brickImageInfo span b{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+:is(#brickInformation) .col-md-6 .brickImageInfo{
+    box-shadow: 16px 18px 19px 18px rgba(0,0,0,0.1);
+
+}
+.active_camera{
+    box-shadow: 16px 18px 19px 18px rgba(0,0,0,0.1) !important;
+}
+:is(#brickInformation) .col-md-6 .camera-border{
+    position: relative;
+    box-shadow: 5px 9px 38px 3px rgb(0 0 0 / 10%);
+    cursor: pointer;
+}
+:is(#brickInformation) .col-md-6 .brickImageInfo,
+:is(#brickInformation) .col-md-6 .camera-border{
+    width: calc(100% - 6%);
+    height: 17rem;
+    padding: 3rem;
+    border-radius: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+:is(#brickInformation) .col-md-6 img{
+    width: 80px;
+}
+#brickInformation .btn-go{
+    display: inline-block;
+    padding: .2rem 2rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 300;
+}
+#brickInformation .camera-border > [type="file"]{
+        position: absolute;
+        width: 100%;
+        cursor: pointer;
+
+}
+
+
+/* responsive css */
+@media(max-width:576px) {
+    header#stepHeader img{
+        width:2.7rem;
+    }
+    .steps{
+       flex-direction: column;
+       align-items: center;
+    }
+    .steps .step:first-child{
+        margin-left: 0;
+    }
+    .steps .step:last-child{
+        margin-right: 0;
+    }
+    #step .step-content{
+        padding-right: 0;
+    }
+    .step-circle::before{
+        display: none;
+    }
+    #brickInformation{
+        padding-top: 3rem;
+    }
+    :is(#brickInformation) .col-md-6 .brickImageInfo, :is(#brickInformation) .col-md-6 .camera-border{
+        width: calc(100% - 20%);
+        height: 14rem;
+    }
+    :is(#brickInformation) .col-md-6 img {
+        width: 50px;
+    }
+    :is(#brickInformation) .col-md-6 h3 {
+        font-size: 1.2rem;
+    }
+    :is(#brickInformation) .col-md-6 .brickImageInfo span b{
+        font-size: 1.6rem;
+    }
+    
+}
+/******************************************/
+/************** STEP PAGE CSS END ************/
+/****************************************/
