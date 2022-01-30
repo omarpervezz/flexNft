@@ -36,10 +36,16 @@ $(document).ready(function () {
 	});
 });
 const cameraBorder = document.querySelector('.camera-border')
+const brickInfo = document.querySelector('.brickImageInfo')
 function fileHandler(){
      return cameraBorder.classList.add('active_camera')
 }
+brickInfo.addEventListener('click', () => {
+	cameraBorder.classList.toggle('active_camera');
+	brickInfo.classList.toggle('brickInfo')
+})
 cameraBorder.addEventListener('click', () => {
-     cameraBorder.classList.toggle('active_camera')
+     cameraBorder.classList.toggle('active_camera');
+	 brickInfo.classList.toggle('brickInfo')
 })
 new DnDZone(document.getElementById('dndzone-example'));
