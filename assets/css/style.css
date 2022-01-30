@@ -818,7 +818,7 @@ header#stepHeader h4 span{
     font-weight: 500;
 }
 :is(#brickInformation) .col-md-6 .brickInfo{
-    box-shadow: 16px 18px 19px 18px rgba(0,0,0,0.1);
+    box-shadow: 16px 18px 19px 18px rgb(0 0 0 / 10%) !important;
 
 }
 :is(#brickInformation) .col-md-6 .brickImageInfo,
@@ -833,6 +833,7 @@ header#stepHeader h4 span{
     align-items: center;
     margin: auto;
     cursor: pointer;
+    box-shadow: 1px 4px 14px -2px;
 }
 :is(#brickInformation) .col-md-6 .brickImageInfo img{
     width: 120px;
@@ -843,7 +844,7 @@ header#stepHeader h4 span{
 :is(#brickInformation) .col-md-6 .camera-border{
     position: relative;
     cursor: pointer;
-    box-shadow: 1px 4px 14px -2px;
+    /* box-shadow: 1px 4px 14px -2px; */
 }
 :is(#brickInformation) .col-md-6 .camera-border img{
    cursor: pointer;
