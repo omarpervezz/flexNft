@@ -856,7 +856,9 @@ header#stepHeader h4 span{
     padding: 1.5rem 3.3rem;
     border-radius: 1rem;
 }
-
+#brickInformation .camera-border .dndzone-input[type="file"]{
+    opacity: 0;
+}
 
 /* responsive css */
 @media(max-width:576px) {
