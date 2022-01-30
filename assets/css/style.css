@@ -785,19 +785,22 @@ header#stepHeader h4{
     padding-left: 3rem;
     color: #007bff;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 header#stepHeader h4 span{
     color: #000000;
+    font-size: 22px;
 }
 #step .step-content{
     padding-right: 2rem;
 }
 #step .step-circle{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 4rem;
+    height: 4rem;
 }
 .steps{
    text-align: center;
+   margin-left: 2rem;
 }
 #brickInformation {
     padding: 6rem 0 4rem 0;
@@ -837,6 +840,7 @@ header#stepHeader h4 span{
 :is(#brickInformation) .col-md-6 .camera-border{
     position: relative;
     cursor: pointer;
+    box-shadow: 1px 4px 14px -2px;
 }
 :is(#brickInformation) .col-md-6 .camera-border img{
    cursor: pointer;
@@ -847,9 +851,11 @@ header#stepHeader h4 span{
     padding: .2rem 2rem;
     margin-top: 2rem;
     border-radius: 1rem;
-    color: #fff;
-    font-weight: 300;
-    background: #8f8888;
+    color: #242121;
+    font-weight: 500;
+    background: #d8d9db;
+    outline: none;
+    border: none;
 }
 
 #brickInformation .camera-border .dndzone-area{
@@ -871,6 +877,7 @@ header#stepHeader h4 span{
     }
     .steps{
         overflow-x: inherit;
+        margin-left: 3rem;
     }
     :is(.steps) .step-content{
         width: 2rem;
@@ -879,11 +886,11 @@ header#stepHeader h4 span{
         padding-right: 0;
     }
     #step .step-content{
-        padding-right: 1.4rem;
+        padding-right: 2.7rem;
     }
     :is(.steps) .step-circle{
-        width: 2rem !important;
-        height: 2rem !important;
+        width: 3.2rem !important;
+        height: 3.2rem !important;
     }
     :is(.steps) .step-circle::before {
         width: calc(2rem + 1rem - 1.5rem);
