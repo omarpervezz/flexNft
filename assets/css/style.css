@@ -796,8 +796,11 @@ header#stepHeader h4 span{
     width: 2.5rem;
     height: 2.5rem;
 }
+.steps{
+   text-align: center;
+}
 #brickInformation {
-    padding: 8rem 0 6rem 0;
+    padding: 6rem 0 4rem 0;
     text-align: center;
 }
 :is(#brickInformation) .col-md-6 h3{
@@ -895,14 +898,23 @@ header#stepHeader h4 span{
         width: calc(100% - 20%);
         height: 14rem;
     }
-    :is(#brickInformation) .col-md-6 img {
-        width: 40px;
+    :is(#brickInformation) .col-md-6 .brickImageInfo img {
+        width: 74px;
+    }
+    :is(#brickInformation) .col-md-6 .camera-border img {
+        width: 50px;
+    }
+    #brickInformation .camera-border .dndzone-area{
+        padding: 1rem 2rem;
     }
     :is(#brickInformation) .col-md-6 h3 {
         font-size: 1rem;
     }
     :is(#brickInformation) .col-md-6 .brickImageInfo span b{
         font-size: 1.3rem;
+    }
+    #brickInformation .btn-go {
+        margin-top: 1rem;
     }
     
 }
@@ -917,6 +929,15 @@ header#stepHeader h4 span{
         width: 1.2rem !important;
         height: 1.2rem !important;
         font-size: .5rem;
+    }
+    :is(#brickInformation) .col-md-6 .brickImageInfo img {
+        width: 45px;
+    }
+    :is(#brickInformation) .col-md-6 .brickImageInfo, :is(#brickInformation) .col-md-6 .camera-border{
+        width: inherit;
+    }
+    :is(#brickInformation) .col-md-6 .camera-border img {
+        width: 32px;
     }
 }
 /******************************************/
